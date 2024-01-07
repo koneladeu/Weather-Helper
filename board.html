@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="board.css">
+    </head>
+<body>
+  
+    <header class="site-header">
+        <div class="wrapper site-header__wrapper">
+          <div class="site-header__start">
+            <nav class="nav">
+              <button class="nav__toggle" aria-expanded="false" type="button">
+                menu
+              </button>
+              <ul class="nav__wrapper">
+                <li class="nav__item"><a href="#">Home</a></li>
+                <li class="nav__item"><a href="#">About</a></li>
+                <li class="nav__item"><a href="#">Services</a></li>
+                <li class="nav__item"><a href="#">Hire us</a></li>
+                <li class="nav__item"><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+            <a href="index.html" class="brand">Weather Helper</a>
+            <div class="search">
+              <button class="search__toggle" aria-label="Open search">
+                Search
+              </button>
+              <form class="search__form" action="">
+                <label class="sr-only" for="search"></label>
+                <input
+                  type="search"
+                  name=""
+                  id="search"
+                  placeholder="enter a location's name"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="site-header__end">
+            <ul class="sub-nav">
+              <li class=""><a href="#">Services</a></li>
+              <li class=""><a href="#">Home</a></li>
+              <li class=""><a href="#">About</a></li>
+              <li class=""><a href="#">Hire us</a></li>
+            </ul>
+          </div>
+        </div>
+        <script>
+            let navToggle = document.querySelector(".nav__toggle");
+let navWrapper = document.querySelector(".nav__wrapper");
+
+navToggle.addEventListener("click", function () {
+  if (navWrapper.classList.contains("active")) {
+    this.setAttribute("aria-expanded", "false");
+    this.setAttribute("aria-label", "menu");
+    navWrapper.classList.remove("active");
+  } else {
+    navWrapper.classList.add("active");
+    this.setAttribute("aria-label", "close menu");
+    this.setAttribute("aria-expanded", "true");
+    searchForm.classList.remove("active");
+    searchToggle.classList.remove("active");
+  }
+});
+
+let searchToggle = document.querySelector(".search__toggle");
+let searchForm = document.querySelector(".search__form");
+
+searchToggle.addEventListener("click", showSearch);
+
+function showSearch() {
+  searchForm.classList.toggle("active");
+  searchToggle.classList.toggle("active");
+
+  navToggle.setAttribute("aria-expanded", "false");
+  navToggle.setAttribute("aria-label", "menu");
+  navWrapper.classList.remove("active");
+
+  if (searchToggle.classList.contains("active")) {
+    searchToggle.setAttribute("aria-label", "Close search");
+  } else {
+    searchToggle.setAttribute("aria-label", "Open search");
+  }
+}
+
+        </script>
+      </header>
+        <div class="nav_container">
+        <div class="weather_container">
+
+            <div class="location">
+                <div class="location_name">abidjan cote d'ivoire</div>
+                <div class="time">12:15</div>
+            </div>
+
+            <div class="weather_info" style="height: 100px;">
+                <div class="left">
+                    <div class="text">condition meteo</div>
+                    <div class="weather">30c</div>
+                </div>
+    
+                <div class="right">
+                    <div class="text">indice air</div>
+                    <div class="weather">meteo information</div>
+                </div>
+            </div>
+            
+            <div class="bottom">
+                <div class="day dy1">mon</div>
+			    <div class="day dy2">tue</div>
+			    <div class="day dy3">wed</div>
+			    <div class="day dy4">thurs</div>
+			    <div class="day dy5">fri</div>
+			    <div class="day dy6">sat</div>
+            </div>
+        </div>
+        </div>
+</body>
+</html>

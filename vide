@@ -1,0 +1,23 @@
+<h3>Ladeu the basketball player</h3>
+          <p>Ladeu is your quintessential "weekend warrior" on the basketball court. While he may not be a professional athlete, he has a deep love for the game and enjoys hitting the courts with friends and fellow enthusiasts whenever he can. Standing at an average height, Ladeu doesn't tower over opponents, but he makes up for it with his determination and passion for the sport.</p>
+        </article>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__left">
+        <article data-scrollmagic>
+          <h3>Ladeu the developer</h3>
+          <p>Over the years, Ladeu developed his programming skills and gain good skill in various programming languages, including Python and Java. He is known for his ability to tackle complex problems. Colleagues describe him as someone who is highly capable of thinking outside the box to find elegant solutions.</p>
+        </article>
+      </div>
+      <div class="section__right"></div>
+    </section>
+    <section class="section">
+      <div class="section__left"></div>
+      <div class="section__right">
+        <article data-scrollmagic>
+          <h3>Ladeu :)</h3>
+          <p>In summary, Ladeu is a talented and passionate programmer who has made a mark in the programming industry with exceptional technical skills and creativity.</p>
+          <a href="index.html" class="btn btn--ghost">homepage</a>
+        </article>
+

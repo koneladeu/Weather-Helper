@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Customer>
+<dob>2000-01-12T12:13:14Z</dob>
+<Address> 34 thingy street, someplace, sometown, ww1 8uu </Address>
+</Customer>
+<Supplier>
+<Phone>0123987654</Phone>
+<Address>22 whatever place, someplace, sometown, ss1 6gy </Address>
+</Supplier>
+
+<xs:element name="Customer">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="dob" type="xs:date" />
+<xs:element name="Address">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Line1" type="xs:string" />
+<xs:element name="Line2" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Supplier">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Phone" type="xs:integer" />
+<xs:element name="Address">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Line1" type="xs:string" />
+<xs:element name="Line2" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
